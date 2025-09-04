@@ -14,7 +14,10 @@ public class Main {
         Product p4 = new Product("Smartphone-Halterung", "P004", "Universelle Halterung für Auto und Schreibtisch", "19.99", "50");
         Product p5 = new Product("USB-C Ladegerät", "P005", "Schnellladegerät mit 65W Leistung und zwei Ports", "34.95", "40");
 
-        ShopService shopService = new ShopService();
+        // OrderMapRepo verwenden
+        OrderRepo orderRepo = new OrderMapRepo(); // Hier entscheidest du dich für die Map-Implementierung
+        ShopService shopService = new ShopService(orderRepo); // Übergib das Repo an den ShopService
+
         List<Order> orders = new ArrayList<>();
         ProductRepo productRepo = new ProductRepo();
         List<Product> products = new ArrayList<>();

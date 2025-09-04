@@ -4,6 +4,10 @@ import java.util.List;
 
 public class ShopService {
     //Objekte
+    private final OrderRepo orderRepo;
+    public ShopService(OrderRepo orderRepo) {
+        this.orderRepo = orderRepo;
+    }
     ProductRepo productRepo = new ProductRepo();
     Product product = new Product("", "", "", "", "");
     Order order = new Order("", "", "", "", "", "");
