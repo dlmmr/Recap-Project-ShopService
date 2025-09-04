@@ -9,8 +9,6 @@ public class ShopService {
         this.orderRepo = orderRepo;
     }
     ProductRepo productRepo = new ProductRepo();
-    Product product = new Product("", "", "", "", "");
-    Order order = new Order("", "", "", "", "", "");
 
 
     // Methode zur Generierung einer einfachen Order-ID
